@@ -38,7 +38,7 @@ class RedditRequest: RequestProtocol {
     var path: String = "/r"
     var method: RequestMethod = .get
     var headers: ReaquestHeaders? = nil
-    var parameters: RequestParameters? = [Parameters.limit : 1]
+    var parameters: RequestParameters? = [Parameters.limit : 2]
     var subreddit: Subreddit = .ios
     var sorting: Sorting = .top
     

@@ -14,8 +14,9 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchPosts { [weak self] post in
+            guard let post = post else { return }
             DispatchQueue.main.async {
-                self?.postView.show(post: post!)
+                self?.postView.show(post: post)
             }
         }
     }
