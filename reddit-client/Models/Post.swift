@@ -13,6 +13,7 @@ struct Data: Codable {
 
 struct Children: Codable {
     let children: [PostData]?
+    let after: String?
 }
 
 struct PostData: Codable {
@@ -28,6 +29,7 @@ struct Post: Codable {
     let comments: Int?
     let ups: Int?
     let downs: Int?
+    let id: String?
     
     var rating: Int {
         return (ups ?? 0) + (downs ?? 0)
@@ -41,7 +43,7 @@ struct Post: Codable {
     var isSaved: Bool = true
     
     enum CodingKeys: String, CodingKey {
-        case title, username = "name", domain, ups, downs, created = "created_utc", comments = "num_comments", image = "preview"
+        case title, username = "name", domain, ups, downs, created = "created_utc", comments = "num_comments", image = "preview", id
     }
 }
 

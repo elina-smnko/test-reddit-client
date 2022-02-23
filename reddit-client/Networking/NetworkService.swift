@@ -38,7 +38,7 @@ class RedditRequest: RequestProtocol {
     var path: String = "/r"
     var method: RequestMethod = .get
     var headers: ReaquestHeaders? = nil
-    var parameters: RequestParameters? = [Parameters.limit : 2]
+    var parameters: RequestParameters? = [Parameters.limit : 5]
     var subreddit: Subreddit = .ios
     var sorting: Sorting = .top
     
@@ -89,12 +89,13 @@ final class NetworkService {
         task.resume()
     }
     
-    func performRequest(subreddit: Subreddit, sorting: Sorting, parameters: [Parameters:String]?, completion: @escaping (Result<[Post], NetworkServiceError>)->()) {
+    func performRequest(subreddit: Subreddit, sorting: Sorting, parameters: [Parameters:String]?, completion: @escaping (Result<(String?,[Post]), NetworkServiceError>)->()) {
         
         guard let urlRequest = RedditRequest(subreddit: subreddit, sorting: sorting, parameters: parameters).urlRequest() else {
             completion(.failure(.invalidUrlError))
             return
         }
+        print(urlRequest.url)
         let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
             if error != nil {
                 completion(.failure(.sessionError))
@@ -105,7 +106,7 @@ final class NetworkService {
                     completion(.failure(.decodingError))
                     return
                 }
-                completion(.success(posts))
+                completion(.success((result.data?.after,posts)))
             }
         }
         task.resume()
@@ -147,7 +148,7 @@ extension RequestProtocol {
 }
 
 enum Parameters: String {
-    case after = "after", limit = "limit"
+    case after, limit, count
 }
 
 enum Sorting: String {

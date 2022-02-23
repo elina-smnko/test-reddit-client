@@ -36,8 +36,6 @@ class PostView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.purple.cgColor
     }
     
     func show(post: Post) {

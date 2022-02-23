@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0CC30CAB27BBC7C400980F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC30CAA27BBC7C400980F82 /* AppDelegate.swift */; };
 		0CC30CAD27BBC7C400980F82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC30CAC27BBC7C400980F82 /* SceneDelegate.swift */; };
-		0CC30CAF27BBC7C400980F82 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC30CAE27BBC7C400980F82 /* PostViewController.swift */; };
+		0CC30CAF27BBC7C400980F82 /* PostScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC30CAE27BBC7C400980F82 /* PostScreenViewController.swift */; };
 		0CC30CB227BBC7C400980F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC30CB027BBC7C400980F82 /* Main.storyboard */; };
 		0CC30CB427BBC7C700980F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC30CB327BBC7C700980F82 /* Assets.xcassets */; };
 		0CC30CB727BBC7C700980F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC30CB527BBC7C700980F82 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		0CC30CD127BC112100980F82 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC30CD027BC112100980F82 /* PostView.swift */; };
 		0CC30CD827BC11A600980F82 /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC30CD727BC11A600980F82 /* PostView.xib */; };
 		0CC30CDC27BC308300980F82 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC30CDB27BC308300980F82 /* Double+.swift */; };
+		0CCCD2B127C510FD002C26B0 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCD2B027C510FD002C26B0 /* PostListViewController.swift */; };
+		0CCCD2B527C511CB002C26B0 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCD2B427C511CB002C26B0 /* PostListViewModel.swift */; };
+		0CCCD2CE27C55286002C26B0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCD2CD27C55286002C26B0 /* PostTableViewCell.swift */; };
 		9946C74F4357C84F31506FF7 /* Pods_reddit_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A57B31DCFED25A5AF4CC32 /* Pods_reddit_client.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +30,7 @@
 		0CC30CA727BBC7C400980F82 /* reddit-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reddit-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC30CAA27BBC7C400980F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC30CAC27BBC7C400980F82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0CC30CAE27BBC7C400980F82 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		0CC30CAE27BBC7C400980F82 /* PostScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenViewController.swift; sourceTree = "<group>"; };
 		0CC30CB127BBC7C400980F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CC30CB327BBC7C700980F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CC30CB627BBC7C700980F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		0CC30CD027BC112100980F82 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		0CC30CD727BC11A600980F82 /* PostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
 		0CC30CDB27BC308300980F82 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		0CCCD2B027C510FD002C26B0 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		0CCCD2B427C511CB002C26B0 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		0CCCD2CD27C55286002C26B0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		26A57B31DCFED25A5AF4CC32 /* Pods_reddit_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reddit_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F790C0317708E7DA62DB7DF /* Pods-reddit-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit-client.release.xcconfig"; path = "Target Support Files/Pods-reddit-client/Pods-reddit-client.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,9 +81,9 @@
 		0CC30CA927BBC7C400980F82 /* reddit-client */ = {
 			isa = PBXGroup;
 			children = (
+				0CCCD2AF27C510E1002C26B0 /* Scenes */,
 				0CC30CDA27BC307500980F82 /* Utilities */,
 				0CC30CCE27BC10F900980F82 /* View */,
-				0CC30CCA27BC04E500980F82 /* PostScreen */,
 				0CC30CC627BBDD7A00980F82 /* Models */,
 				0CC30CC127BBCA0300980F82 /* Networking */,
 				0CC30CBF27BBC86C00980F82 /* System */,
@@ -117,7 +123,7 @@
 		0CC30CCA27BC04E500980F82 /* PostScreen */ = {
 			isa = PBXGroup;
 			children = (
-				0CC30CAE27BBC7C400980F82 /* PostViewController.swift */,
+				0CC30CAE27BBC7C400980F82 /* PostScreenViewController.swift */,
 				0CC30CCB27BC050100980F82 /* PostScreenViewModel.swift */,
 			);
 			path = PostScreen;
@@ -148,13 +154,39 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		0CCCD2AE27C510D7002C26B0 /* PostListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0CCCD2B027C510FD002C26B0 /* PostListViewController.swift */,
+				0CCCD2B427C511CB002C26B0 /* PostListViewModel.swift */,
+			);
+			path = PostListScreen;
+			sourceTree = "<group>";
+		};
+		0CCCD2AF27C510E1002C26B0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0CCCD2C027C53B15002C26B0 /* PostTableViewCell */,
+				0CC30CCA27BC04E500980F82 /* PostScreen */,
+				0CCCD2AE27C510D7002C26B0 /* PostListScreen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0CCCD2C027C53B15002C26B0 /* PostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CCCD2CD27C55286002C26B0 /* PostTableViewCell.swift */,
+			);
+			path = PostTableViewCell;
+			sourceTree = "<group>";
+		};
 		7766A78B8B2A5578979D2575 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				04E868214242BF625FAA1D9C /* Pods-reddit-client.debug.xcconfig */,
 				7F790C0317708E7DA62DB7DF /* Pods-reddit-client.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,13 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCCD2CE27C55286002C26B0 /* PostTableViewCell.swift in Sources */,
 				0CC30CD127BC112100980F82 /* PostView.swift in Sources */,
-				0CC30CAF27BBC7C400980F82 /* PostViewController.swift in Sources */,
+				0CC30CAF27BBC7C400980F82 /* PostScreenViewController.swift in Sources */,
+				0CCCD2B527C511CB002C26B0 /* PostListViewModel.swift in Sources */,
 				0CC30CAB27BBC7C400980F82 /* AppDelegate.swift in Sources */,
 				0CC30CC327BBDCE200980F82 /* NetworkService.swift in Sources */,
 				0CC30CAD27BBC7C400980F82 /* SceneDelegate.swift in Sources */,
 				0CC30CC827BBDDA000980F82 /* Post.swift in Sources */,
 				0CC30CDC27BC308300980F82 /* Double+.swift in Sources */,
+				0CCCD2B127C510FD002C26B0 /* PostListViewController.swift in Sources */,
 				0CC30CCC27BC050100980F82 /* PostScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

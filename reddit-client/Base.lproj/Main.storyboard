@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6O-dC-6qr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post View Controller-->
+        <!--Post Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PostViewController" customModule="reddit_client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostScreenViewController" id="BYZ-38-t0r" customClass="PostScreenViewController" customModule="reddit_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="72.991071428571431"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="72.991071428571431"/>
+        </scene>
+        <!--Post List View Controller-->
+        <scene sceneID="Lfh-TW-J0t">
+            <objects>
+                <viewController id="Xlu-dI-XqH" customClass="PostListViewController" customModule="reddit_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNV-BK-KAU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-fe-dQF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="A05-iD-2ur" customClass="PostTableViewCell" customModule="reddit_client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A05-iD-2ur" id="ESo-jZ-ayR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-eD-ZPw" customClass="PostView" customModule="reddit_client" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="T3x-Kn-5Ed"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="o7u-eD-ZPw" firstAttribute="top" secondItem="ESo-jZ-ayR" secondAttribute="top" id="45C-WA-IJc"/>
+                                                <constraint firstItem="o7u-eD-ZPw" firstAttribute="leading" secondItem="ESo-jZ-ayR" secondAttribute="leading" id="FUj-rU-8bT"/>
+                                                <constraint firstAttribute="bottom" secondItem="o7u-eD-ZPw" secondAttribute="bottom" id="ZiZ-rh-BqR"/>
+                                                <constraint firstAttribute="trailing" secondItem="o7u-eD-ZPw" secondAttribute="trailing" id="yLk-GB-cqU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="PostCell"/>
+                                        <connections>
+                                            <outlet property="postView" destination="o7u-eD-ZPw" id="aTf-P6-dWB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6ii-Mh-KxF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gk8-fe-dQF" firstAttribute="top" secondItem="6ii-Mh-KxF" secondAttribute="top" id="Jap-Qi-g5Z"/>
+                            <constraint firstItem="Gk8-fe-dQF" firstAttribute="leading" secondItem="6ii-Mh-KxF" secondAttribute="leading" id="Sr8-76-try"/>
+                            <constraint firstItem="6ii-Mh-KxF" firstAttribute="trailing" secondItem="Gk8-fe-dQF" secondAttribute="trailing" id="cW5-Zx-ijR"/>
+                            <constraint firstItem="6ii-Mh-KxF" firstAttribute="bottom" secondItem="Gk8-fe-dQF" secondAttribute="bottom" id="y4j-We-siN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XHH-W4-Aw4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Gk8-fe-dQF" id="ppW-mG-dLA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0V-3a-1EK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71.014492753623188" y="72.991071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BdV-KI-QwW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6O-dC-6qr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XEj-lS-XGd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xlu-dI-XqH" kind="relationship" relationship="rootViewController" id="ZB5-Oj-q3S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8w-xj-21m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839.13043478260875" y="72.991071428571431"/>
         </scene>
     </scenes>
     <resources>
