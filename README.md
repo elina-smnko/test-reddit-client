@@ -1,4 +1,4 @@
-# test-reddit-client
+# Reddit
 Simple Reddit client
 
 ## Description
